@@ -1,0 +1,5 @@
+*.doc
+.idea
+out
+*.class
+

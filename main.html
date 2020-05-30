@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> MYGP</title>
+</head>
+
+<link rel="stylesheet" href="style1.css">
+<link rel="stylesheet" href="style2.css">
+
+<body>
+<div class="w3-border " id = "container">
+    <div class="w3-container w3-blue" id = "header">
+        <h1> MYGP Database Project </h1>
+    </div>
+
+    <!-- Simple Queries Start Here -->
+
+    <div class = "w3-container w3-border w3-large w3-animate-zoom" >
+        <h2><b>Simple Queries : </b></h2>
+    </div>
+
+    <div class="w3-container w3-border w3-large w3-padding" id = "simple_query1">
+        <p>1. Finds the users information with the given mobile number :</p>
+
+        <form class="w3-container " id = "sform1" action = "runQuery.php" method = "post">
+            <input class="w3-input " type = "text" placeholder="mobile number" name = "num"/><br>
+            <div class="w3-bar">
+                <input type="button" class="w3-button w3-black w3-padding w3-left" value = "Run query" onclick="loadQuery(11)" />
+                <input type="button" class="w3-button w3-black w3-padding" value = "See code" onclick="showCode(11)" />  
+                           
+                <input type="button" class="w3-button w3-black w3-padding w3-right" value = "Clear"
+                       onclick="document.getElementById('sq1').innerHTML = ''" />
+            </div>
+        </form>
+
+        <div class="w3-container" id="sq1">
+        </div>
+    </div>
+
+    <div class="w3-container w3-border w3-large w3-padding" id = "simple_query2">
+        <p>2. Finds the call history of the user with mobile number :</p>
+
+        <form class="w3-container" id = "sform2" action = "runQuery.php" method = "post">
+            <!--
+                    <label class="w3-medium w3-animate-opacity"> Mobile Number </label>
+            -->
+            <input class="w3-input "type = "text" placeholder="mobile number" name = "num"/><br>
+            <div class="w3-bar">
+                <input type="button" class="w3-button w3-black w3-padding w3-left" value = "Run query" onclick="loadQuery(12)" />
+                <input type="button" class="w3-button w3-black w3-padding" value = "See code" onclick="showCode(12)" />  
+                <input type="button" class="w3-button w3-black w3-padding w3-right" value = "Clear"
+                       onclick="document.getElementById('sq2').innerHTML = ''" />
+            </div>
+        </form>
+        <div class="w3-container" id="sq2">
+        </div>
+    </div>
+
+    <div class="w3-container w3-border w3-large w3-padding"  id = "simple_query3">
+        <p>3. Finds the internet history of the user with mobile number :</p>
+
+        <form class="w3-container" id = "sform3" action = "runQuery.php" method = "post">
+            <input class="w3-input " type = "text" placeholder="mobile number"  name = "num"/><br>
+            <div class="w3-bar">
+                <input type="button" class="w3-button w3-black w3-padding w3-left" value = "Run query" onclick="loadQuery(13)" />
+                <input type="button" class="w3-button w3-black w3-padding" value = "See code" onclick="showCode(13)" />  
+                <input type="button" class="w3-button w3-black w3-padding w3-right" value = "Clear"
+                       onclick="document.getElementById('sq3').innerHTML = ''" />
+            </div>        </form>
+        <div class="w3-container" id="sq3">
+        </div>
+    </div>
+
+    <div class="w3-container w3-border w3-large w3-padding" id = "simple_query4">
+        <p>4. Finds the sms history of the user with mobile number :</p>
+
+        <form class="w3-container" id = "sform4" action = "runQuery.php" method = "post">
+            <input class="w3-input " type = "text"  placeholder="mobile number" name = "num"/><br>
+            <div class="w3-bar">
+                <input type="button" class="w3-button w3-black w3-padding w3-left" value = "Run query" onclick="loadQuery(14)" />
+                <input type="button" class="w3-button w3-black w3-padding" value = "See code" onclick="showCode(14)" />  
+                <input type="button" class="w3-button w3-black w3-padding w3-right" value = "Clear"
+                       onclick="document.getElementById('sq4').innerHTML = ''" />
+            </div>        </form>
+        <div class="w3-container" id="sq4">
+        </div>
+    </div>
+
+    <div class="w3-container w3-border w3-large w3-padding" id = "simple_query5">
+        <p>5. Finds the recharge history of the user with mobile number :</p>
+
+        <form class="w3-container" id = "sform5" action = "runQuery.php" method = "post">
+            <input class="w3-input " type = "text"  placeholder="mobile number" name = "num"/><br>
+            <div class="w3-bar">
+                <input type="button" class="w3-button w3-black w3-padding w3-left" value = "Run query" onclick="loadQuery(15)" />
+                <input type="button" class="w3-button w3-black w3-padding" value = "See code" onclick="showCode(15)" />  
+                <input type="button" class="w3-button w3-black w3-padding w3-right" value = "Clear"
+                       onclick="document.getElementById('sq5').innerHTML = ''" />
+            </div>        </form>
+        <div class="w3-container" id="sq5">
+        </div>
+    </div>
+
+
+    <div class="w3-container w3-border w3-large w3-padding" id = "simple_query6">
+        <p>6. Show the reward offers :</p>
+
+        <form class="w3-container " id = "sform6" action = "runQuery.php" method = "post">
+            <div class="w3-bar">
+                <input type="button" class="w3-button w3-black w3-padding w3-left" value = "Run query" onclick="loadQuery(16)" />
+                <input type="button" class="w3-button w3-black w3-padding" value = "See code" onclick="showCode(16)" />  
+                <input type="button" class="w3-button w3-black w3-padding w3-right" value = "Clear"
+                       onclick="document.getElementById('sq6').innerHTML = ''" />
+            </div>
+        </form>
+
+        <div class="w3-container" id="sq6">
+        </div>
+    </div>
+
+    <div class="w3-container w3-border w3-large w3-padding" id = "simple_query7">
+        <p>7. Show the talk time offers :</p>
+
+        <form class="w3-container" id = "sform7" action = "runQuery.php" method = "post">
+            <div class="w3-bar">
+                <input type="button" class="w3-button w3-black w3-padding w3-left" value = "Run query" onclick="loadQuery(17)" />
+                <input type="button" class="w3-button w3-black w3-padding" value = "See code" onclick="showCode(17)" />  
+                <input type="button" class="w3-button w3-black w3-padding w3-right" value = "Clear"
+                       onclick="document.getElementById('sq7').innerHTML = ''" />
+            </div>
+        </form>
+        <div class="w3-container" id="sq7">
+        </div>
+    </div>
+
+    <div class="w3-container w3-border w3-large w3-padding"  id = "simple_query8">
+        <p>8. Show the SMS offers :</p>
+
+        <form class="w3-container" id = "sform8" action = "runQuery.php" method = "post">
+            <div class="w3-bar">
+                <input type="button" class="w3-button w3-black w3-padding w3-left" value = "Run query" onclick="loadQuery(18)" />
+                <input type="button" class="w3-button w3-black w3-padding" value = "See code" onclick="showCode(18)" />  
+                <input type="button" class="w3-button w3-black w3-padding w3-right" value = "Clear"
+                       onclick="document.getElementById('sq8').innerHTML = ''" />
+            </div>        </form>
+        <div class="w3-container" id="sq8">
+        </div>
+    </div>
+
+    <div class="w3-container w3-border w3-large w3-padding" id = "simple_query9">
+        <p>9. Show the internet offers :</p>
+
+        <form class="w3-container" id = "sform9" action = "runQuery.php" method = "post">
+            <div class="w3-bar">
+                <input type="button" class="w3-button w3-black w3-padding w3-left" value = "Run query" onclick="loadQuery(19)" />
+                <input type="button" class="w3-button w3-black w3-padding" value = "See code" onclick="showCode(19)" />  
+                <input type="button" class="w3-button w3-black w3-padding w3-right" value = "Clear"
+                       onclick="document.getElementById('sq9').innerHTML = ''" />
+            </div>        </form>
+        <div class="w3-container" id="sq9">
+        </div>
+    </div>
+
+    <div class="w3-container w3-border w3-large w3-padding" id = "simple_query10">
+        <p>10. Show the package information :</p>
+
+        <form class="w3-container" id = "sform10" action = "runQuery.php" method = "post">
+            <div class="w3-bar">
+                <input type="button" class="w3-button w3-black w3-padding w3-left" value = "Run query" onclick="loadQuery(20)" />
+                <input type="button" class="w3-button w3-black w3-padding" value = "See code" onclick="showCode(20)" />  
+                <input type="button" class="w3-button w3-black w3-padding w3-right" value = "Clear"
+                       onclick="document.getElementById('sq10').innerHTML = ''" />
+            </div>        </form>
+        <div class="w3-container" id="sq10">
+        </div>
+    </div>
+
+    <div class="w3-container w3-border w3-large w3-padding" id = "simple_query11">
+        <p>11. Show star offers for the given star :</p>
+
+        <form class="w3-container" id = "sform11" action = "runQuery.php" method = "post">
+            <input class="w3-input " type = "text"  placeholder="mobile number" name = "num"/><br>
+            <div class="w3-bar">
+                <input type="button" class="w3-button w3-black w3-padding w3-left" value = "Run query" onclick="loadQuery(21)" />
+                <input type="button" class="w3-button w3-black w3-padding" value = "See code" onclick="showCode(21)" />  
+                <input type="button" class="w3-button w3-black w3-padding w3-right" value = "Clear"
+                       onclick="document.getElementById('sq11').innerHTML = ''" />
+            </div>        </form>
+        <div class="w3-container" id="sq11">
+        </div>
+    </div>
+    <div class="w3-container w3-border w3-large w3-padding" id = "simple_query12">
+        <p>12. Show the notifications of the given mobile number:</p>
+
+        <form class="w3-container" id = "sform12" action = "runQuery.php" method = "post">
+            <input class="w3-input " type = "text"  placeholder="mobile number" name = "num"/><br>
+            <div class="w3-bar">
+                <input type="button" class="w3-button w3-black w3-padding w3-left" value = "Run query" onclick="loadQuery(22)" />
+                <input type="button" class="w3-button w3-black w3-padding" value = "See code" onclick="showCode(22)" />  
+                <input type="button" class="w3-button w3-black w3-padding w3-right" value = "Clear"
+                       onclick="document.getElementById('sq12').innerHTML = ''" />
+            </div>        </form>
+        <div class="w3-container" id="sq12">
+        </div>
+    </div>
+
+    <div class="w3-container w3-border w3-large w3-padding" id = "simple_query13">
+        <p>13. Show the fnf numbers of the given mobile number:</p>
+
+        <form class="w3-container" id = "sform13" action = "runQuery.php" method = "post">
+            <input class="w3-input " type = "text"  placeholder="mobile number" name = "num"/><br>
+            <div class="w3-bar">
+                <input type="button" class="w3-button w3-black w3-padding w3-left" value = "Run query" onclick="loadQuery(23)" />
+                <input type="button" class="w3-button w3-black w3-padding" value = "See code" onclick="showCode(23)" />  
+                <input type="button" class="w3-button w3-black w3-padding w3-right" value = "Clear"
+                       onclick="document.getElementById('sq13').innerHTML = ''" />
+            </div>        </form>
+        <div class="w3-container" id="sq13">
+        </div>
+    </div>
+
+    <div class="w3-container w3-border w3-large w3-padding" id = "simple_query14">
+        <p>14. Show the linked numbers of the given mobile number:</p>
+
+        <form class="w3-container" id = "sform14" action = "runQuery.php" method = "post">
+            <input class="w3-input " type = "text"  placeholder="mobile number" name = "num"/><br>
+            <div class="w3-bar">
+                <input type="button" class="w3-button w3-black w3-padding w3-left" value = "Run query" onclick="loadQuery(24)" />
+                <input type="button" class="w3-button w3-black w3-padding" value = "See code" onclick="showCode(24)" />  
+                <input type="button" class="w3-button w3-black w3-padding w3-right" value = "Clear"
+                       onclick="document.getElementById('sq14').innerHTML = ''" />
+            </div>        
+        </form>
+        <div class="w3-container" id="sq14">
+        </div>
+    </div>
+
+    <div class="w3-container w3-border w3-large w3-padding" id = "simple_query15">
+        <p>15. Show the offer id from the offer table :</p>
+
+        <form class="w3-container" id = "sform15" action = "runQuery.php" method = "post">
+            <div class="w3-bar">
+                <input type="button" class="w3-button w3-black w3-padding w3-left" value = "Run query" onclick="loadQuery(25)" />
+                <input type="button" class="w3-button w3-black w3-padding" value = "See code" onclick="showCode(25)" />  
+                <input type="button" class="w3-button w3-black w3-padding w3-right" value = "Clear"
+                       onclick="document.getElementById('sq15').innerHTML = ''" />
+            </div>       
+        </form>
+        <div class="w3-container" id="sq15">
+        </div>
+    </div>
+
+    <!-- complex queries  -->
+
+    <div class = "w3-container w3-border w3-large" >
+        <h2><b>Complex Queries : </b></h2>
+    </div>
+
+
+    <div class="w3-container w3-border w3-large w3-padding" id = "complex_query1">
+        <p>1. Find the offer_id ,price and number of times purchased of top five all kinds of offers those have been purchased in last 3 months :</p>
+
+        <form class="w3-container" id = "cform1" action = "runQuery.php" method = "post">
+            <div class="w3-bar">
+                <input type="button" class="w3-button w3-black w3-padding w3-left" value = "Run query" onclick="loadQuery(31)" />
+                <input type="button" class="w3-button w3-black w3-padding" value = "See code" onclick="showCode(31)" /> 
+                <input type="button" class="w3-button w3-black w3-padding w3-right" value = "Clear"
+                       onclick="document.getElementById('cq1').innerHTML = ''" />
+            </div>
+        </form>
+        <div class="w3-container" id="cq1">
+        </div>
+    </div>
+
+    <div class="w3-container w3-border w3-large w3-padding" id = "complex_query2">
+        <p>2. Find the users who have made at least 1 call to his/her current fnf numbers in
+            last 6 months. Show the output along with the fnf numbers to which they called and total number of
+            calls made :</p>
+
+        <form class="w3-container" id = "cform2" action = "runQuery.php" method = "post">
+            <div class="w3-bar">
+                <input type="button" class="w3-button w3-black w3-padding w3-left" value = "Run query" onclick="loadQuery(32)" />
+                <input type="button" class="w3-button w3-black w3-padding" value = "See code" onclick="showCode(32)" /> 
+                <input type="button" class="w3-button w3-black w3-padding w3-right" value = "Clear"
+                       onclick="document.getElementById('cq2').innerHTML = ''" />
+            </div>
+        </form>
+        <div class="w3-container" id="cq2">
+        </div>
+    </div>
+
+    <div class="w3-container w3-border w3-large w3-padding" id = "complex_query3">
+        <p>3. Show the user_name and total number of sms he or she has sent in the past 90 days, of the users who have used
+            an offer more than or equal 3 times in the past 60 days :</p>
+
+        <form class="w3-container" id = "cform3" action = "runQuery.php" method = "post">
+            <div class="w3-bar">
+                <input type="button" class="w3-button w3-black w3-padding w3-left" value = "Run query" onclick="loadQuery(33)" />
+                <input type="button" class="w3-button w3-black w3-padding" value = "See code" onclick="showCode(33)" /> 
+                <input type="button" class="w3-button w3-black w3-padding w3-right" value = "Clear"
+                       onclick="document.getElementById('cq3').innerHTML = ''" />
+            </div>
+        </form>
+        <div class="w3-container" id="cq3">
+        </div>
+    </div>
+
+    <div class="w3-container w3-border w3-large w3-padding" id = "complex_query4">
+        <p>4. Show the user_name and mobile number of the users who use djuice package and have used al least 1000 taka in the past 60 days :</p>
+
+        <form class="w3-container" id = "cform4" action = "runQuery.php" method = "post">
+            <div class="w3-bar">
+                <input type="button" class="w3-button w3-black w3-padding w3-left" value = "Run query" onclick="loadQuery(34)" />
+                <input type="button" class="w3-button w3-black w3-padding" value = "See code" onclick="showCode(34)" /> 
+                <input type="button" class="w3-button w3-black w3-padding w3-right" value = "Clear"
+                       onclick="document.getElementById('cq4').innerHTML = ''" />
+            </div>
+        </form>
+        <div class="w3-container" id="cq4">
+        </div>
+    </div>
+
+
+    <div class="w3-container w3-border w3-large w3-padding" id = "complex_query5">
+        <p>5. Show the users name, mobile number and star status, who have taken the offer that have been purchased maximum number of times :</p>
+
+        <form class="w3-container" id = "cform5" action = "runQuery.php" method = "post">
+            <div class="w3-bar">
+                <input type="button" class="w3-button w3-black w3-padding w3-left" value = "Run query" onclick="loadQuery(35)" />
+                <input type="button" class="w3-button w3-black w3-padding" value = "See code" onclick="showCode(35)" /> 
+                <input type="button" class="w3-button w3-black w3-padding w3-right" value = "Clear"
+                       onclick="document.getElementById('cq5').innerHTML = ''" />
+            </div>
+        </form>
+        <div class="w3-container" id="cq5">
+        </div>
+    </div>
+
+    <div class="w3-container w3-border w3-large w3-padding" id = "complex_query6">
+        <p>6. Show the user name and the total used amount in the last month, who are PLATINUM PLUS
+            users and fnf of at least 2 users and linked by at least two users :</p>
+
+        <form class="w3-container" id = "cform6" action = "runQuery.php" method = "post">
+            <div class="w3-bar">
+                <input type="button" class="w3-button w3-black w3-padding w3-left" value = "Run query" onclick="loadQuery(36)" />
+                <input type="button" class="w3-button w3-black w3-padding" value = "See code" onclick="showCode(36)" /> 
+                <input type="button" class="w3-button w3-black w3-padding w3-right" value = "Clear"
+                       onclick="document.getElementById('cq6').innerHTML = ''" />
+            </div>
+        </form>
+        <div class="w3-container" id="cq6">
+        </div>
+    </div>
+
+    <div class="w3-container w3-border w3-large w3-padding" id = "complex_query7">
+        <p>7. Give the total count of internet offer, sms offer and talk-time offers
+            purchased by each star type in last 2 months along with the star status:</p>
+
+        <form class="w3-container" id = "cform7" action = "runQuery.php" method = "post">
+            <div class="w3-bar">
+                <input type="button" class="w3-button w3-black w3-padding w3-left" value = "Run query" onclick="loadQuery(37)" />
+                <input type="button" class="w3-button w3-black w3-padding" value = "See code" onclick="showCode(37)" /> 
+                <input type="button" class="w3-button w3-black w3-padding w3-right" value = "Clear"
+                       onclick="document.getElementById('cq7').innerHTML = ''" />
+            </div>
+        </form>
+        <div class="w3-container" id="cq7">
+        </div>
+    </div>
+
+    <div class="w3-container w3-border w3-large w3-padding" id = "complex_query8">
+        <p>8. Those users who are under the bondhu package and a star, give their star
+            status, total count of the call list and total sms made in last 3 months :</p>
+
+        <form class="w3-container" id = "cform8" action = "runQuery.php" method = "post">
+            <div class="w3-bar">
+                <input type="button" class="w3-button w3-black w3-padding w3-left" value = "Run query" onclick="loadQuery(38)" />
+                <input type="button" class="w3-button w3-black w3-padding" value = "See code" onclick="showCode(38)" /> 
+                <input type="button" class="w3-button w3-black w3-padding w3-right" value = "Clear"
+                       onclick="document.getElementById('cq8').innerHTML = ''" />
+            </div>
+        </form>
+        <div class="w3-container" id="cq8">
+        </div>
+    </div>
+
+
+    <!-- Functions and Procedures Start Here -->
+
+    <div class = "w3-container w3-border w3-large" >
+        <h2><b>Functions and Procedures : </b></h2>
+    </div>
+
+    <div class="w3-container w3-border w3-large w3-padding" id = "procedure1">
+        <p>1. Recharge the users account with the given amount :</p>
+
+        <form class="w3-container "  id = "pform1" action = "procedures.php" method = "post">
+            <input class="w3-input " type = "text" placeholder="mobile number" name = "num"/><br>
+            <input class="w3-input " type = "text" placeholder="amount" name = "amount"/><br>
+            <div class="w3-bar">
+                <input type="button" class="w3-button w3-black w3-padding w3-left" value = "Call Function" onclick="callFunction(1)" />
+                <input type="button" class="w3-button w3-black w3-padding" value = "See Code" onclick="showCode(41)" />
+                <input type="button" class="w3-button w3-black w3-padding w3-right" value = "Clear"
+                       onclick="document.getElementById('pf1').innerHTML = ''" />
+            </div>
+        </form>
+
+        <div class="w3-container" id="pf1">
+        </div>
+    </div>
+
+    <div class="w3-container w3-border w3-large w3-padding" id = "procedure2">
+        <p>2. Purchase Internet Offer :</p>
+
+        <form class="w3-container "  id = "pform2" action = "procedures.php" method = "post">
+            <input class="w3-input " type = "text" placeholder="mobile number" name = "num"/><br>
+            <input class="w3-input " type = "text" placeholder="offer id" name = "off_id"/><br>
+            <div class="w3-bar">
+                <input type="button" class="w3-button w3-black w3-padding w3-left" value = "Call Function" onclick="callFunction(2)" />
+                <input type="button" class="w3-button w3-black w3-padding" value = "See Code" onclick="showCode(42)" />
+                <input type="button" class="w3-button w3-black w3-padding w3-right" value = "Clear"
+                       onclick="document.getElementById('pf2').innerHTML = ''" />
+            </div>
+        </form>
+
+        <div class="w3-container" id="pf2">
+        </div>
+    </div>
+
+    <div class="w3-container w3-border w3-large w3-padding" id = "procedure3">
+        <p>3. Purchase Talk-Time Offer :</p>
+
+        <form class="w3-container "  id = "pform3" action = "procedures.php" method = "post">
+            <input class="w3-input " type = "text" placeholder="mobile number" name = "num"/><br>
+            <input class="w3-input " type = "text" placeholder="offer id" name = "off_id"/><br>
+            <div class="w3-bar">
+                <input type="button" class="w3-button w3-black w3-padding w3-left" value = "Call Function" onclick="callFunction(3)" />
+                <input type="button" class="w3-button w3-black w3-padding" value = "See Code" onclick="showCode(43)" />
+                <input type="button" class="w3-button w3-black w3-padding w3-right" value = "Clear"
+                       onclick="document.getElementById('pf3').innerHTML = ''" />
+            </div>
+        </form>
+
+        <div class="w3-container" id="pf3">
+        </div>
+    </div>
+
+    <div class="w3-container w3-border w3-large w3-padding" id = "procedure4">
+        <p>4. Purchase SMS Offer :</p>
+
+        <form class="w3-container "  id = "pform4" action = "procedures.php" method = "post">
+            <input class="w3-input " type = "text" placeholder="mobile number" name = "num"/><br>
+            <input class="w3-input " type = "text" placeholder="offer id" name = "off_id"/><br>
+            <div class="w3-bar">
+                <input type="button" class="w3-button w3-black w3-padding w3-left" value = "Call Function" onclick="callFunction(4)" />
+                <input type="button" class="w3-button w3-black w3-padding" value = "See Code" onclick="showCode(44)" />
+                <input type="button" class="w3-button w3-black w3-padding w3-right" value = "Clear"
+                       onclick="document.getElementById('pf4').innerHTML = ''" />
+            </div>
+        </form>
+
+        <div class="w3-container" id="pf4">
+        </div>
+    </div>
+
+    <div class="w3-container w3-border w3-large w3-padding" id = "procedure5">
+        <p>5. Purchase Reward Offer :</p>
+
+        <form class="w3-container "  id = "pform5" action = "procedures.php" method = "post">
+            <input class="w3-input " type = "text" placeholder="mobile number" name = "num"/><br>
+            <input class="w3-input " type = "text" placeholder="offer id" name = "off_id"/><br>
+            <div class="w3-bar">
+                <input type="button" class="w3-button w3-black w3-padding w3-left" value = "Call Function" onclick="callFunction(5)" />
+                <input type="button" class="w3-button w3-black w3-padding" value = "See Code" onclick="showCode(45)" />
+                <input type="button" class="w3-button w3-black w3-padding w3-right" value = "Clear"
+                       onclick="document.getElementById('pf5').innerHTML = ''" />
+            </div>
+        </form>
+
+        <div class="w3-container" id="pf5">
+        </div>
+    </div>
+
+    <div class="w3-container w3-border w3-large w3-padding" id = "procedure6">
+        <p>6. Purchase General Offer :</p>
+
+        <form class="w3-container "  id = "pform6" action = "procedures.php" method = "post">
+            <input class="w3-input " type = "text" placeholder="Mobile number" name = "num"/><br>
+            <input class="w3-input " type = "text" placeholder="Munite" name = "min"/><br>
+            <input class="w3-input " type = "text" placeholder="MB Amount" name = "data"/><br>
+            <input class="w3-input " type = "text" placeholder="SMS" name = "sms"/><br>
+            <input class="w3-input " type = "text" placeholder="Validity" name = "valid"/><br>
+            <div class="w3-bar">
+                <input type="button" class="w3-button w3-black w3-padding w3-left" value = "Call Function" onclick="callFunction(6)" />
+                <input type="button" class="w3-button w3-black w3-padding" value = "See Code" onclick="showCode(46)" />
+                <input type="button" class="w3-button w3-black w3-padding w3-right" value = "Clear"
+                       onclick="document.getElementById('pf6').innerHTML = ''" />
+            </div>
+        </form>
+
+        <div class="w3-container" id="pf6">
+        </div>
+    </div>
+
+    <div class="w3-container w3-border w3-large w3-padding" id = "procedure7">
+        <p>7. Make FNF :</p>
+
+        <form class="w3-container "  id = "pform7" action = "procedures.php" method = "post">
+            <input class="w3-input " type = "text" placeholder="Your number" name = "num"/><br>
+            <input class="w3-input " type = "text" placeholder="FNF number" name = "fnf_num"/><br>
+            <div class="w3-bar">
+                <input type="button" class="w3-button w3-black w3-padding w3-left" value = "Call Function" onclick="callFunction(7)" />
+                <input type="button" class="w3-button w3-black w3-padding" value = "See Code" onclick="showCode(47)" />
+                <input type="button" class="w3-button w3-black w3-padding w3-right" value = "Clear"
+                       onclick="document.getElementById('pf7').innerHTML = ''" />
+            </div>
+        </form>
+
+        <div class="w3-container" id="pf7">
+        </div>
+    </div>
+
+    <div class="w3-container w3-border w3-large w3-padding" id = "procedure8">
+        <p>8. Make link :</p>
+
+        <form class="w3-container "  id = "pform8" action = "procedures.php" method = "post">
+            <input class="w3-input " type = "text" placeholder="Your number" name = "num"/><br>
+            <input class="w3-input " type = "text" placeholder="Link number" name = "link_num"/><br>
+            <div class="w3-bar">
+                <input type="button" class="w3-button w3-black w3-padding w3-left" value = "Call Function" onclick="callFunction(8)" />
+                <input type="button" class="w3-button w3-black w3-padding" value = "See Code" onclick="showCode(48)" />
+                <input type="button" class="w3-button w3-black w3-padding w3-right" value = "Clear"
+                       onclick="document.getElementById('pf8').innerHTML = ''" />
+            </div>
+        </form>
+
+        <div class="w3-container" id="pf8">
+        </div>
+    </div>
+
+    <div class="w3-container w3-border w3-large w3-padding" id = "procedure9">
+        <p>9. Migrate Package :</p>
+
+        <form class="w3-container "  id = "pform9" action = "procedures.php" method = "post">
+            <input class="w3-input " type = "text" placeholder="mobile number" name = "num"/><br>
+            <input class="w3-input " type = "text" placeholder="package name" name = "pack_name"/><br>
+            <div class="w3-bar">
+                <input type="button" class="w3-button w3-black w3-padding w3-left" value = "Call Function" onclick="callFunction(9)" />
+                <input type="button" class="w3-button w3-black w3-padding" value = "See Code" onclick="showCode(49)" />
+                <input type="button" class="w3-button w3-black w3-padding w3-right" value = "Clear"
+                       onclick="document.getElementById('pf9').innerHTML = ''" />
+            </div>
+        </form>
+
+        <div class="w3-container" id="pf9">
+        </div>
+    </div>
+
+    <div class="w3-container w3-border w3-large w3-padding" id = "procedure10">
+        <p>10. Take Emergency Balance :</p>
+
+        <form class="w3-container "  id = "pform10" action = "procedures.php" method = "post">
+            <input class="w3-input " type = "text" placeholder="Mobile Number" name = "num"/><br>
+            <input class="w3-input " type = "text" placeholder="Emergency Balance Amount" name = "amount"/><br>
+            <div class="w3-bar">
+                <input type="button" class="w3-button w3-black w3-padding w3-left" value = "Call Function" onclick="callFunction(10)" />
+                <input type="button" class="w3-button w3-black w3-padding" value = "See Code" onclick="showCode(50)" />
+                <input type="button" class="w3-button w3-black w3-padding w3-right" value = "Clear"
+                       onclick="document.getElementById('pf10').innerHTML = ''" />
+            </div>
+        </form>
+
+        <div class="w3-container" id="pf10">
+        </div>
+    </div>
+
+    <div class="w3-container w3-border w3-large w3-padding" id = "procedure11">
+        <p>11. Transfer Balance :</p>
+
+        <form class="w3-container "  id = "pform11" action = "procedures.php" method = "post">
+            <input class="w3-input " type = "text" placeholder="Your Mobile Number" name = "num"/><br>
+            <input class="w3-input " type = "text" placeholder="Receiver Mobile Number" name = "num2"/><br>
+            <input class="w3-input " type = "text" placeholder="Emergency Balance Amount" name = "amount"/><br>
+            <div class="w3-bar">
+                <input type="button" class="w3-button w3-black w3-padding w3-left" value = "Call Function" onclick="callFunction(11)" />
+                <input type="button" class="w3-button w3-black w3-padding" value = "See Code" onclick="showCode(51)" />
+                <input type="button" class="w3-button w3-black w3-padding w3-right" value = "Clear"
+                       onclick="document.getElementById('pf11').innerHTML = ''" />
+            </div>
+        </form>
+
+        <div class="w3-container" id="pf11">
+        </div>
+    </div>
+
+
+    <!--    Triggers description :-->
+
+    <div class = "w3-container w3-border w3-large" >
+        <h2><b>Triggers Descriptions : </b></h2>
+
+        <div class="w3-container w3-border w3-large w3-padding" >
+            <p>1. Check Star Trigger :<br></p>
+            <p>It triggers after purchasing every offer on purchase_offer table and checks the validity of the user that he/she has become a star or not </p>
+
+            <button class="w3-button w3-black w3-left" onclick="showCode(61)">See Code</button>
+            <button class="w3-button w3-black w3-right" onclick="document.getElementById('t1').innerHTML = ''">Clear</button>
+
+            <div class="w3-container" id="t1">
+            </div>
+
+        </div>
+        <div class="w3-container w3-border w3-large w3-padding" >
+            <p>2. Insert internet pk to parent :<br></p>
+            <p>It triggers after inserting an internet offer on internet offer table and insert the primary key to the offer table </p>
+
+            <button class="w3-button w3-black w3-left" onclick="loadQuery(62)">Insert New Offer</button>
+            <button class="w3-button w3-black w3-left" onclick="showCode(62)">See Code</button>
+            <button class="w3-button w3-black w3-right" onclick="document.getElementById('t2').innerHTML = ''">Clear</button>
+
+            <div class="w3-container" id="t2">
+            </div>
+        </div>
+
+        <div class="w3-container w3-border w3-large w3-padding" >
+            <p>3. Insert sms pk to parent :<br></p>
+            <p>It triggers after inserting a sms offer on sms offer table and insert the primary key to the offer table </p>
+
+            <button class="w3-button w3-black w3-left" onclick="loadQuery(63)">Insert New Offer</button>
+            <button class="w3-button w3-black w3-left" onclick="showCode(63)">See Code</button>
+            <button class="w3-button w3-black w3-right" onclick="document.getElementById('t3').innerHTML = ''">Clear</button>
+
+            <div class="w3-container" id="t3">
+            </div>
+        </div>
+
+        <div class="w3-container w3-border w3-large w3-padding" >
+            <p>4. Insert talk time pk to parent :<br></p>
+            <p>It triggers after inserting an talk time offer on talk time offer table and insert the primary key to the offer table </p>
+
+            <button class="w3-button w3-black w3-left" onclick="loadQuery(64)">Insert New Offer</button>
+            <button class="w3-button w3-black w3-left" onclick="showCode(64)">See Code</button>
+            <button class="w3-button w3-black w3-right" onclick="document.getElementById('t4').innerHTML = ''">Clear</button>
+
+            <div class="w3-container" id="t4">
+            </div>
+        </div>
+
+        <div class="w3-container w3-border w3-large w3-padding">
+            <p>5. Insert reward pk to parent :<br></p>
+            <p>It triggers after inserting an reward offer on reward offer table and insert the primary key to the offer table </p>
+
+            <button class="w3-button w3-black w3-left" onclick="loadQuery(65)">Insert New Offer</button>
+            <button class="w3-button w3-black w3-left" onclick="showCode(65)">See Code</button>
+            <button class="w3-button w3-black w3-right" onclick="document.getElementById('t5').innerHTML = ''">Clear</button>
+
+            <div class="w3-container" id="t5">
+            </div>
+        </div>
+
+        <div class="w3-container w3-border w3-large w3-padding" >
+            <p>6. Insert general pk to parent :<br></p>
+            <p>It triggers after inserting an general offer on general offer table and insert the primary key to the offer table </p>
+
+            <button class="w3-button w3-black w3-left" onclick="loadQuery(66)">Insert New Offer</button>
+            <button class="w3-button w3-black w3-left" onclick="showCode(66)">See Code</button>
+            <button class="w3-button w3-black w3-right" onclick="document.getElementById('t6').innerHTML = ''">Clear</button>
+
+            <div class="w3-container" id="t6">
+            </div>
+        </div>
+
+    </div>
+
+
+
+</div>
+
+<!-- Javacript --->
+
+<script>
+    function loadQuery(str) {
+        var form;
+        if(str == '11') form = document.getElementById("sform1");
+        else if(str == '12') form = document.getElementById("sform2");
+        else if(str == '13') form = document.getElementById("sform3");
+        else if(str == '14') form = document.getElementById("sform4");
+        else if(str == '15') form = document.getElementById("sform5");
+        else if(str == '16') form = document.getElementById("sform6");
+        else if(str == '17') form = document.getElementById("sform7");
+        else if(str == '18') form = document.getElementById("sform8");
+        else if(str == '19') form = document.getElementById("sform9");
+        else if(str == '20') form = document.getElementById("sform10");
+        else if(str == '21') form = document.getElementById("sform11");
+        else if(str == '22') form = document.getElementById("sform12");
+        else if(str == '23') form = document.getElementById("sform13");
+        else if(str == '24') form = document.getElementById("sform14");
+        else if(str == '25') form = document.getElementById("sform15");
+
+        else if(str == '31') form = document.getElementById("cform1");
+        else if(str == '32') form = document.getElementById("cform2");
+        else if(str == '33') form = document.getElementById("cform3");
+        else if(str == '34') form = document.getElementById("cform4");
+        else if(str == '35') form = document.getElementById("cform5");
+        else if(str == '36') form = document.getElementById("cform6");
+        else if(str == '37') form = document.getElementById("cform7");
+        else if(str == '38') form = document.getElementById("cform8");
+        var form_data = new FormData(form);
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                if(str == '11') {
+                    document.getElementById("sq1").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '12'){
+                    document.getElementById("sq2").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '13'){
+                    document.getElementById("sq3").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '14'){
+                    document.getElementById("sq4").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '15'){
+                    document.getElementById("sq5").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '16'){
+                    document.getElementById("sq6").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '17'){
+                    document.getElementById("sq7").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '18'){
+                    document.getElementById("sq8").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '19'){
+                    document.getElementById("sq9").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '20'){
+                    document.getElementById("sq10").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '21'){
+                    document.getElementById("sq11").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '22'){
+                    document.getElementById("sq12").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '23'){
+                    document.getElementById("sq13").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '24'){
+                    document.getElementById("sq14").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '25'){
+                    document.getElementById("sq15").innerHTML =
+                        this.responseText;
+                }
+
+                else if(str == '31'){
+                    document.getElementById('cq1').innerHTML =
+                        this.responseText;
+                }
+                else if(str == '32'){
+                    document.getElementById('cq2').innerHTML =
+                        this.responseText;
+                }
+                else if(str == '33'){
+                    document.getElementById('cq3').innerHTML =
+                        this.responseText;
+                }
+                else if(str == '34'){
+                    document.getElementById('cq4').innerHTML =
+                        this.responseText;
+                }
+                else if(str == '35'){
+                    document.getElementById('cq5').innerHTML =
+                        this.responseText;
+                }
+                else if(str == '36'){
+                    document.getElementById('cq6').innerHTML =
+                        this.responseText;
+                }
+                else if(str == '37'){
+                    document.getElementById('cq7').innerHTML =
+                        this.responseText;
+                }
+                else if(str == '38'){
+                    document.getElementById('cq8').innerHTML =
+                        this.responseText;
+                }
+            }
+        };
+        xhttp.open("POST", "runQuery.php?q="+str, true);
+        xhttp.send(form_data);
+    }
+
+
+    function showCode(str) {
+        var form;
+        if(str == '11') form = document.getElementById("sform1");
+        else if(str == '12') form = document.getElementById("sform2");
+        else if(str == '13') form = document.getElementById("sform3");
+        else if(str == '14') form = document.getElementById("sform4");
+        else if(str == '15') form = document.getElementById("sform5");
+        else if(str == '16') form = document.getElementById("sform6");
+        else if(str == '17') form = document.getElementById("sform7");
+        else if(str == '18') form = document.getElementById("sform8");
+        else if(str == '19') form = document.getElementById("sform9");
+        else if(str == '20') form = document.getElementById("sform10");
+        else if(str == '21') form = document.getElementById("sform11");
+        else if(str == '22') form = document.getElementById("sform12");
+        else if(str == '23') form = document.getElementById("sform13");
+        else if(str == '24') form = document.getElementById("sform14");
+        else if(str == '25') form = document.getElementById("sform15");
+
+        else if(str == '31') form = document.getElementById("cform1");
+        else if(str == '32') form = document.getElementById("cform2");
+        else if(str == '33') form = document.getElementById("cform3");
+        else if(str == '34') form = document.getElementById("cform4");
+        else if(str == '35') form = document.getElementById("cform5");
+        else if(str == '36') form = document.getElementById("cform6");
+        else if(str == '37') form = document.getElementById("cform7");
+        else if(str == '38') form = document.getElementById("cform8");
+
+        else if(str == '41') form = document.getElementById("pform1");
+        else if(str == '42') form = document.getElementById("pform2");
+        else if(str == '43') form = document.getElementById("pform3");
+        else if(str == '44') form = document.getElementById("pform4");
+        else if(str == '45') form = document.getElementById("pform5");
+        else if(str == '46') form = document.getElementById("pform6");
+        else if(str == '47') form = document.getElementById("pform7");
+        else if(str == '48') form = document.getElementById("pform8");
+        else if(str == '49') form = document.getElementById("pform9");
+        else if(str == '50') form = document.getElementById("pform10");
+        else if(str == '51') form = document.getElementById("pform11");
+
+        var form_data = new FormData(form);
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                if(str == '11') {
+                    document.getElementById("sq1").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '12'){
+                    document.getElementById("sq2").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '13'){
+                    document.getElementById("sq3").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '14'){
+                    document.getElementById("sq4").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '15'){
+                    document.getElementById("sq5").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '16'){
+                    document.getElementById("sq6").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '17'){
+                    document.getElementById("sq7").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '18'){
+                    document.getElementById("sq8").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '19'){
+                    document.getElementById("sq9").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '20'){
+                    document.getElementById("sq10").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '21'){
+                    document.getElementById("sq11").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '22'){
+                    document.getElementById("sq12").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '23'){
+                    document.getElementById("sq13").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '24'){
+                    document.getElementById("sq14").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '25'){
+                    document.getElementById("sq15").innerHTML =
+                        this.responseText;
+                }
+
+                else if(str == '31'){
+                    document.getElementById('cq1').innerHTML =
+                        this.responseText;
+                }
+                else if(str == '32'){
+                    document.getElementById('cq2').innerHTML =
+                        this.responseText;
+                }
+                else if(str == '33'){
+                    document.getElementById('cq3').innerHTML =
+                        this.responseText;
+                }
+                else if(str == '34'){
+                    document.getElementById('cq4').innerHTML =
+                        this.responseText;
+                }
+                else if(str == '35'){
+                    document.getElementById('cq5').innerHTML =
+                        this.responseText;
+                }
+                else if(str == '36'){
+                    document.getElementById('cq6').innerHTML =
+                        this.responseText;
+                }
+                else if(str == '37'){
+                    document.getElementById('cq7').innerHTML =
+                        this.responseText;
+                }
+                else if(str == '38'){
+                    document.getElementById('cq8').innerHTML =
+                        this.responseText;
+                }
+
+                else if(str == '41') {
+                    document.getElementById("pf1").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '42') {
+                    document.getElementById("pf2").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '43') {
+                    document.getElementById("pf3").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '44') {
+                    document.getElementById("pf4").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '45') {
+                    document.getElementById("pf5").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '46') {
+                    document.getElementById("pf6").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '47') {
+                    document.getElementById("pf7").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '48') {
+                    document.getElementById("pf8").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '49') {
+                    document.getElementById("pf9").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '50') {
+                    document.getElementById("pf10").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '51') {
+                    document.getElementById("pf11").innerHTML =
+                        this.responseText;
+                }
+
+                else if(str == '61') {
+                    document.getElementById("t1").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '62') {
+                    document.getElementById("t2").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '63') {
+                    document.getElementById("t3").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '64') {
+                    document.getElementById("t4").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '65') {
+                    document.getElementById("t5").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '66') {
+                    document.getElementById("t6").innerHTML =
+                        this.responseText;
+                }
+            }
+        };
+        xhttp.open("POST", "showCode.php?q="+str, true);
+        xhttp.send(form_data);
+    }
+
+
+    function callFunction(str) {
+        var form;
+        if(str == '1') form = document.getElementById("pform1");
+        else if(str == '2') form = document.getElementById("pform2");
+        else if(str == '3') form = document.getElementById("pform3");
+        else if(str == '4') form = document.getElementById("pform4");
+        else if(str == '5') form = document.getElementById("pform5");
+        else if(str == '6') form = document.getElementById("pform6");
+        else if(str == '7') form = document.getElementById("pform7");
+        else if(str == '8') form = document.getElementById("pform8");
+        else if(str == '9') form = document.getElementById("pform9");
+        else if(str == '10') form = document.getElementById("pform10");
+        else if(str == '11') form = document.getElementById("pform11");
+
+        var form_data = new FormData(form);
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                if(str == '1') {
+                    document.getElementById("pf1").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '2') {
+                    document.getElementById("pf2").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '3') {
+                    document.getElementById("pf3").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '4') {
+                    document.getElementById("pf4").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '5') {
+                    document.getElementById("pf5").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '6') {
+                    document.getElementById("pf6").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '7') {
+                    document.getElementById("pf7").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '8') {
+                    document.getElementById("pf8").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '9') {
+                    document.getElementById("pf9").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '10') {
+                    document.getElementById("pf10").innerHTML =
+                        this.responseText;
+                }
+                else if(str == '11') {
+                    document.getElementById("pf11").innerHTML =
+                        this.responseText;
+                }
+            }
+        };
+        xhttp.open("POST", "procedures.php?q="+str, true);
+        xhttp.send(form_data);
+    }
+
+</script>
+
+</body>
+</html>
